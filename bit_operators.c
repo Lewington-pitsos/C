@@ -9,7 +9,7 @@ void print_backwards(int length, int digits[] ) {
 
 void print_binary(int num) {
   int digit;
-  int alldigits[100];
+  int alldigits[16] = {};
   int index = 0;
 
   while(num > 0) {
@@ -19,17 +19,22 @@ void print_binary(int num) {
     index++;
   }
 
-  print_backwards(index, alldigits);
+  print_backwards(16, alldigits);
   printf("\n");
+}
+
+int is_odd(int num) {
+  return (num & 1);
 }
 
 int main (void) {
 
-  int a = 8;
-  int b = 9;
+  int a = 301;
+  int b = 0;
 
   print_binary(a);
-  print_binary(b);
-  print_binary(b << 3);
+  print_binary(a >> (8 - 3));
+  print_binary((a << 3));
+  print_binary((a << 3) | (a >> (8 - 3)) );
 
 }

@@ -5,7 +5,7 @@ int main (void) {
 
   int *intPtr;
 
-  intPtr = (int *) calloc(1, 10);
+  intPtr = (int *) calloc(1atom , 10);
 
   printf("%i", *intPtr);
 

@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 
-#define YES(num,num2) num + (num2 ## 2)
+#define YES(num) #num
 
 int main (void) {
 
-  char ans = YES(2, 2);
+  char ans = YES(23333);
 
-  printf("%i", ans );
+  printf("%c", ans );
 
 }
